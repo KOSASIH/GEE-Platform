@@ -1,0 +1,51 @@
+{
+  "name": "GEE-Platform",
+  "version": "1.0.0",
+  "description": "A super advanced high-tech platform for achieving Global Economic Equilibrium (GEE)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/start_api.js",
+    "build": "npm run compile && npm run deploy",
+    "compile": "babel src --out-dir lib",
+    "deploy": "node compile.js",
+    "start:local": "node src/start_local.js"
+  },
+  "keywords": [
+    "GEE",
+    "Global Economic Equilibrium",
+    "high-tech",
+    "platform"
+  ],
+  "author": "KOSASIH",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "debug": "^4.3.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^6.3.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^6.2.14",
+    "morgan": "^1.10.0",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.6",
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.14.7",
+    "nodemon": "^2.0.13"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KOSASIH/GEE-Platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KOSASIH/GEE-Platform/issues"
+  },
+  "homepage": "https://github.com/KOSASIH/GEE-Platform#readme"
+}
