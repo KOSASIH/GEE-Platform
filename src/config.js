@@ -1,3 +1,9 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
+const get = (key) => process.env[key];
+
+export { get };
 const { toWei } = require('./utils');
 
 const contractAddress = '0x1234567890123456789012345678901234567890';
