@@ -69,3 +69,4 @@ To develop custom integrations and extensions for GEE-Platform, you'll need to s
 
  pip install gee-platform-sdk Please refer to the [API Reference](docs/api_reference.md) 
  
+7. Configure your IDE: If youmd) and [SDK Documentation](sdk_documentation.md're using an IDE like Visual Studio Code or PyCharm) for more detailed information on how to use the GEE-Platform, you may need to configure it to use Python and the G API and SDK.
