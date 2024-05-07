@@ -1,3 +1,12 @@
+const logError = (error) => console.error(error);
+
+const formatError = (error) => error.message;
+
+const throwError = (message) => {
+  throw new Error(message);
+};
+
+export { logError, formatError, throwError };
 const { ContractRejected } = require('web3-core-helpers');
 
 const handleError = (err, res) => {
