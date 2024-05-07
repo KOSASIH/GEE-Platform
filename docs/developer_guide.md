@@ -56,3 +56,13 @@ To develop custom integrations and extensions for GEE-Platform, you'll need to s
 1. Install Python: GEE-Platform is built using Python, so you'll need to install Python on your development machine. We recommend using Python 3.
 2. Install pip: pip is the package manager for Python, and it's used to install the GEE-Platform SDK and other dependencies.
 3. Install the GEE-Platform SDK: The GEE-Platform SDK provides a set of tools and libraries for developing custom integrations and extensions. You can install it using pip:
+
+`pip install gee-platform-sdk`
+
+4. Write your custom integration or extension: You can now use the GEE-Platform SDK to develop your custom integration or extension.
+
+5. Test your integration or extension: Make sure to thoroughly test your integration or extension using the GEE-Platform API and webhooks.
+
+6. Deploy your integration or extension: Once your integration or extension is ready, you can deploy it to a server or a cloud platform.
+
+ You can install it using pip:
