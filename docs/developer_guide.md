@@ -66,3 +66,6 @@ To develop custom integrations and extensions for GEE-Platform, you'll need to s
 6. Deploy your integration or extension: Once your integration or extension is ready, you can deploy it to a server or a cloud platform.
 
  You can install it using pip:
+
+ pip install gee-platform-sdk Please refer to the [API Reference](docs/api_reference.md) 
+ 
