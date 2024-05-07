@@ -49,3 +49,18 @@
   },
   "homepage": "https://github.com/KOSASIH/GEE-Platform#readme"
 }
+"scripts": {
+  "start:local:ci": "CI=true npm run start:local",
+  "start:api:ci": "CI=true npm run start:api",
+  "lint": "eslint . --ext .js,.jsx",
+  "test": "npm run lint && npm run test:unit && npm run test:integration",
+  "test:unit": "mocha --exit test/unit/**/*.test.js",
+  "test:integration": "mocha --exit test/integration/**/*.test.js",
+  "coverage": "nyc report --reporter=text-lcov | coveralls",
+  "deploy:staging": "npm run build && npm run deploy:contracts:staging && npm run deploy:api:staging",
+  "deploy:production": "npm run build && npm run deploy:contracts:production && npm run deploy:api:production",
+  "deploy:contracts:staging": "truffle migrate --network staging",
+  "deploy:contracts:production": "truffle migrate --network production",
+  "deploy:api:staging": "API_NETWORK=staging npm run start:api",
+  "deploy:api:production": "API_NETWORK=production npm run start:api"
+}
