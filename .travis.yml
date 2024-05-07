@@ -1,0 +1,22 @@
+services:
+  - docker
+
+before_install:
+  - docker build -t gee-platform:latest .
+
+script:
+  - docker run -e DJANGO_SETTINGS_MODULE=gee_platform.settings -e SECRET_KEY=your-secret-key -e DEBUG=False -p 8000:8000 gee-platform:latest python manage.py test
+
+after_success:
+  - docker build -t gee-platform:latest .
+  - docker push gee-platform:latest
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: gee-platform
+  env: gee-platform-env
+  bucket_name: elasticbeanstalk-us-east-1-123456789012
+  bucket_path: gee-platform/
+  on:
+    branch: master
